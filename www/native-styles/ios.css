@@ -40,5 +40,5 @@ tab-bar-item#index {
 }
 
 tab-bar-item#map {
-  background-image: url(icons/ei-location.svg);
+  background-image: url(assets/icons/ei-location.svg);
 }
