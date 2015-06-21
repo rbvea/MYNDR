@@ -10,46 +10,19 @@ module.exports =
       location: "food#index" # URLs are supported!
     }
     {
-      title: "Index"
-      id: "index"
-      location: "example#getting-started" # Supersonic module#view type navigation
-    }
-    {
-      title: "Settings"
-      id: "settings"
-      location: "example#settings"
-    }
-    {
-      title: "Internet"
-      id: "internet"
-      location: "http://google.com" # URLs are supported!
-    }
-    
-    
-  ]
-
-  # rootView:
-  #   location: "example#getting-started"
-
-  preloads: [
-    {
-      id: "learn-more"
-      location: "example#learn-more"
-    }
-    {
-      id: "using-the-scanner"
-      location: "example#using-the-scanner"
+      title: "Map"
+      id: "map"
+      location: "food#map" # Supersonic module#view type navigation
     }
   ]
-
-  # drawers:
-  #   left:
-  #     id: "leftDrawer"
-  #     location: "example#drawer"
-  #     showOnAppLoad: false
-  #   options:
-  #     animation: "swingingDoor"
   #
-  # initialView:
-  #   id: "initialView"
-  #   location: "example#initial-view"
+  # preloads: [
+  #   {
+  #     id: "learn-more"
+  #     location: "example#learn-more"
+  #   }
+  #   {
+  #     id: "using-the-scanner"
+  #     location: "example#using-the-scanner"
+  #   }
+  # ]
