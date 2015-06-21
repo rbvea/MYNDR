@@ -8,12 +8,10 @@
   <div class="padding">
     <div ng-show="showSpinner" ng-include="'_spinner.html'"></div>
     <div ng-hide="showSpinner">
-      <h2 ng-bind="food['Name']"></h2>
-      
-      
-      
-       <p>Image: <span ng-bind="food['Image']"></span></p> 
-      
+    <div class="detail">
+      <img src="{{food.Image}}">
+      <img src="{{food.Location}}">
+      <h2 ng-bind="food['Name']"></h2>      
 
 
       <super-modal-show location="food#edit?id={{ food.id }}">
@@ -25,6 +23,7 @@
       <button ng-click="remove(food.id)" class="button button-block button-negative">
         Remove
       </button>
+      </div><!-- </detail -->
     </div>
   </div>
 </div>
