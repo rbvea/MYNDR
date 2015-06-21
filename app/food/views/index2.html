@@ -1,0 +1,31 @@
+<div ng-controller="IndexController">
+  <super-navbar>
+    <super-navbar-title>
+      Food Index
+    </super-navbar-title>
+  </super-navbar>
+
+  <div ng-show="showSpinner" ng-include="'_spinner.html'"></div>
+  <div ng-hide="showSpinner">
+    <ul class="list" ng-hide="foods.length == 0">
+
+      <super-navigate location="food#show" data-params-id="{{ food.id }}" ng-repeat="food in foods">
+        <li class="item item-icon-right">
+          <span ng-bind="food['Name']"></span>
+          <i class="icon super-ios-arrow-right"></i>
+        </li>
+      </super-navigate>
+
+    </ul>
+
+    <h4 ng-show="foods.length == 0" class="assertive padding">
+      No foods found. Create one?
+    </h4>
+
+    <super-modal-show location="food#new">
+      <button class="button button-full button-positive">
+        Create a new food
+      </button>
+    </super-modal-show>
+  </div>
+</div>
