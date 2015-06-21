@@ -15,9 +15,3 @@ module.exports =
       location: "food#map" # Supersonic module#view type navigation
     }
   ]
-  preloads: [
-    {
-      id: "map"
-      location: "food#map"
-    }
-  ]
