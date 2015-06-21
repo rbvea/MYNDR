@@ -3,3 +3,25 @@
   text-align: center;
   font-weight: 600;
 }
+
+body {
+  background: #ebf2f5;
+}
+
+.entry {
+	background: #fff;
+	margin-bottom: 1em;
+	padding: 10px;  
+}
+
+.entry img {
+	margin: 0 auto;
+	display: block;
+	width: 100%;
+	padding: 0;
+}
+
+
+.detail img {
+	max-width: 100%;
+}
