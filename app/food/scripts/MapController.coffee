@@ -30,6 +30,7 @@ angular
             marker = new L.marker center,
               icon: icon
             marker.addTo $scope.map
-            supersonic.ui.views.current.stop()
-            supersonic.ui.views.start 'food#show'
+            marker.on 'click', () ->
+              alert 'click'
+
   )
