@@ -4,14 +4,28 @@
       Show
     </super-navbar-title>
   </super-navbar>
+  <div class="detail">
+  <img src="{{food.Image}}">
+  <img src="{{food.Location}}">
+
 
   <div class="padding">
     <div ng-show="showSpinner" ng-include="'_spinner.html'"></div>
     <div ng-hide="showSpinner">
-    <div class="detail">
-      <img src="{{food.Image}}">
-      <img src="{{food.Location}}">
-      <h2 ng-bind="food['Name']"></h2>      
+    
+      <div class="entry-info">
+      <h2 ng-bind="food['Name']"></h2>  
+
+      <div class="right-info">
+      <img src="/icons/ei-location.svg" style="height:25px;" /> 
+      <span class="location">Honolulu, HI</span>
+
+      </div>
+
+
+      <span ng-bind="food['Description']"></span>
+
+      </div><!-- </entryinfo>-->
 
 
       <super-modal-show location="food#edit?id={{ food.id }}">

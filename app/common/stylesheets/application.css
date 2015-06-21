@@ -12,16 +12,100 @@ body {
 	background: #fff;
 	margin-bottom: 1em;
 	padding: 10px;  
+	position: relative;
 }
 
 .entry img {
 	margin: 0 auto;
 	display: block;
 	width: 100%;
-	padding: 0;
+	padding-bottom: 7px;
+}
+
+.entry .extra-info {
+	float: right;
+	margin-top: 6px;
+	color: #acacac;
+}
+
+.entry .extra-info i {
+	margin-left: 10px;
+
+}
+
+.entry-title {
+	margin-left: 5px;
+	vertical-align: 3px;
+}
+
+i {
+	color: #d5d5d5;
+}
+
+.blue {
+	color: #59d4fc;
 }
 
 
 .detail img {
 	max-width: 100%;
+}
+
+.right-info {
+	position: absolute;
+	top: 18px;
+	right: 10px;
+}
+
+.entry-info {
+	position: relative;
+	background-color: #fff;
+	padding: 10px 10px 20px 10px;
+	border: 2px solid #f2f2f2;
+}
+
+.location {
+	vertical-align: 7px;
+}
+
+.example {
+	position: absolute;
+	top: 125px;
+	width: 100%;
+	text-align: center;
+	display: none;
+
+}
+
+.example i {
+	color: #fff;
+}
+
+/*
+ * Animation configurations ( duration and fill mode )
+*/
+.animated {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+
+/*
+ * Flash animation
+*/
+ 
+@-webkit-keyframes flash {
+    0%, 50%, 100% {opacity: 1;}
+    25%, 75% {opacity: 0;}
+}
+@keyframes flash {
+    0%, 50%, 100% {opacity: 1;}
+    25%, 75% {opacity: 0;}
+}
+.flash {
+	display: inline !important; 
+    -webkit-animation-name: flash;
+    animation-name: flash;
 }

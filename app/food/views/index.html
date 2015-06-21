@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
 <div ng-controller="IndexController">
   <super-navbar>
     <super-navbar-title>
@@ -10,12 +12,32 @@
     
     <ul class="list" ng-hide="foods.length == 0">
 
-      <super-navigate location="food#show" data-params-id="{{ food.id }}" ng-repeat="food in foods">
-        <li class="entry">
-          <img src="{{food.Image}}">
-          <span ng-bind="food['Name']"></span>
+      
+        <li class="entry" ng-repeat="food in foods">
+          <super-navigate location="food#show" data-params-id="{{ food.id }}" >
+            <img src="{{food.Image}}">
+
+            <div class="example animated">
+              <i class="fa fa-cloud" style="font-size:10em"></i>
+            </div>
+
+
+          </super-navigate>
+          <i class="fa fa-cloud" style="font-size:2em" ng-click='selectCloud($event)'></i>
+          <span class="entry-title" ng-bind="food['Name']"></span>
+
+
+
+          <div class="extra-info">
+          <i class="fa fa-map-marker"></i>
+          <span>Honolulu, HI</span>
+          <i class="fa fa-user"></i>
+          <span ng-bind="food['User']"></span>
+          </div>
+
+
         </li>
-      </super-navigate>
+      
 
     </ul>
    
@@ -23,5 +45,3 @@
    
   </div>
 </div>
-
-

@@ -41,3 +41,7 @@ tab-bar-item#map{
 tab-bar-item#food {
   background-image: url(icons/feed.svg);
 }
+
+tab-bar-item#map {
+  background-image: url(icons/ei-location.svg);
+}
