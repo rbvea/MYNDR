@@ -2,7 +2,7 @@
 
 module.exports =
   app:
-    name: "marqit&#x2F;"
+    name: "marqit-steroids"
 
   # steroidsAppId and steroidsApiKey headers are required by Supersonic Data
   # network:
