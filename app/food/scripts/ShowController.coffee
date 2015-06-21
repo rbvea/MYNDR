@@ -11,6 +11,16 @@ angular
           $scope.food = food
           $scope.showSpinner = false
 
+    supersonic.data.channel 'detail'
+      .subscribe (dataId) ->
+        $scope.dataId = dataId
+        Food.find(dataId)
+          .then (food) ->
+            $scope.food = food
+            $scope.showSpinner = false
+          .error (err) ->
+            console.log err
+
     supersonic.ui.views.current.whenVisible ->
       _refreshViewData() if $scope.dataId
 

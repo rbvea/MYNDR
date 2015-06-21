@@ -31,12 +31,19 @@ angular
           if center
             marker = new L.marker center,
               icon: icon
-            marker.addEventListener 'click' , () ->
+              alt: food.id
+            marker.addEventListener 'click' , (e) ->
+              name = e.target._icon.alt
               supersonic.ui.views.find 'food#show'
                 .then (view) ->
                   supersonic.ui.layers.push view
-                .error (err) ->
-                  console.log err
+                    .then () ->
+                      setTimeout () ->
+                        console.log 'hmm'
+                        supersonic.data.channel 'detail'
+                          .publish name
+                      , 7000
+
             marker.addTo $scope.map
 
   )
