@@ -1,6 +1,3 @@
-test = () ->
-  alert 'test'
-
 angular
   .module('food')
   .controller("MapController", ($scope, Food, supersonic, $http) ->
@@ -36,13 +33,9 @@ angular
               name = e.target._icon.alt
               supersonic.ui.views.find 'food#show'
                 .then (view) ->
-                  supersonic.ui.layers.push view
-                    .then () ->
-                      setTimeout () ->
-                        console.log 'hmm'
-                        supersonic.data.channel 'detail'
-                          .publish name
-                      , 7000
+                  supersonic.ui.layers.push view ,
+                    params:
+                      id: name
 
             marker.addTo $scope.map
 
