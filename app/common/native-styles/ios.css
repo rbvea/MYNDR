@@ -27,12 +27,12 @@ tab-bar {
 
 tab-bar tab-bar-item {
   color: #b0b1b4;
-  font-family: "Avenir";
+  font-family: "Quicksand", serif;
   font-size: 10px;
 }
 
 tab-bar tab-bar-item:selected {
-  color: #1596f7;
+  color: #18C9A7;
 }
 
 tab-bar-item#map{
