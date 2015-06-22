@@ -1,0 +1,50 @@
+<div ng-controller="FavController">
+  <super-navbar>
+    <super-navbar-title>
+      Favorites
+    </super-navbar-title>
+  </super-navbar>
+
+  <div class="profile">
+    <img src="/profile.png" style="height:125px">
+    
+    <div class="profile-info">
+      <h5>Matt Chinnock</h5>
+        <p>Favorites 5</p>
+        <p>MYNDRs 5</p>
+    </div>
+
+  </div>
+
+  <div ng-show="showSpinner" ng-include="'_spinner.html'"></div>
+  <div ng-hide="showSpinner">
+    <ul class="list" ng-hide="foods.length == 0">
+
+    <!--<super-navigate location="food#show" data-params-id="{{ food.id }}" ng-repeat="food in foods" | filter:'food.Favorte == false'>
+      <li class="fav-item">
+        <img src="{{food.Image}}" />
+      </li>
+    </super-navigate>-->
+    <li class="fav-item" ng-repeat="food in foods" | filter:'food.Favorte == false'>
+        <super-navigate location="food#show" data-params-id="{{ food.id }}">
+          <img src="{{food.Image}}" />
+        </super-navigate>  
+    </li>
+    
+
+      <!--<super-navigate location="food#show" data-params-id="{{ food.id }}" ng-repeat="food in foods" | filter:'food.Favorte == false'>
+        <li class="item item-icon-right">
+          <span ng-bind="food['Name']"></span>
+          <i class="icon super-ios-arrow-right"></i>
+        </li>
+      </super-navigate>-->
+
+    </ul>
+
+    <h4 ng-show="foods.length == 0" class="assertive padding">
+      No Favorites.
+    </h4>
+
+
+  </div>
+</div>

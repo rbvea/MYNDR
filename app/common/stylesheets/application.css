@@ -125,3 +125,45 @@ i {
   margin-top: -65px !important;
   margin-left: -30px !important;
 }
+
+.profile, .list {
+	background-color: #fff;
+	margin: 10px;
+}
+
+.list {
+	padding: 5px;	
+}
+
+.list:after {
+    clear: both;
+}
+
+.list:before,
+.list:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.fav-item img {
+	width: 50%;
+	float: left;
+	border: 2px solid #fff;
+}
+
+.list li:nth-child(3n) img {
+	width: 100%;
+	
+}
+
+
+.profile-info {
+	float: right;
+	margin: 15px 100px 0 0;
+}
+
+.capture img {
+	width: 100%;
+}
+
+

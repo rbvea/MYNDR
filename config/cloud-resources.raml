@@ -16,8 +16,8 @@ traits:
           default: 66586
 
 schemas:
-  - Food_collection: '{"$schema":"http://json-schema.org/schema","title":"Food collection","type":"object","properties":{"objects":{"type":"array","items":{"$schema":"http://json-schema.org/schema","type":"object","description":"The canonical Food representation","properties":{"Name":{"type":"string"},"Image":{"type":"string"},"Location":{"type":"string"},"Description":{"type":"string"},"User":{"type":"string"}},"required":[]}}}}'
-  - Food_member: '{"$schema":"http://json-schema.org/schema","type":"object","description":"The canonical Food representation","properties":{"object":{"type":"object","properties":{"Name":{"type":"string"},"Image":{"type":"string"},"Location":{"type":"string"},"Description":{"type":"string"},"User":{"type":"string"}},"required":[]}}}'
+  - Food_collection: '{"$schema":"http://json-schema.org/schema","title":"Food collection","type":"object","properties":{"objects":{"type":"array","items":{"$schema":"http://json-schema.org/schema","type":"object","description":"The canonical Food representation","properties":{"Name":{"type":"string"},"Image":{"type":"string"},"Location":{"type":"string"},"Description":{"type":"string"},"User":{"type":"string"},"Favorite":{"type":"boolean"}},"required":[]}}}}'
+  - Food_member: '{"$schema":"http://json-schema.org/schema","type":"object","description":"The canonical Food representation","properties":{"object":{"type":"object","properties":{"Name":{"type":"string"},"Image":{"type":"string"},"Location":{"type":"string"},"Description":{"type":"string"},"User":{"type":"string"},"Favorite":{"type":"boolean"}},"required":[]}}}'
 
 resourceTypes:
   - dolan_db_collection:

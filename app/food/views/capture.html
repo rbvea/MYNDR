@@ -1,0 +1,28 @@
+<div ng-controller="CaptureController">
+  <super-navbar>
+    <super-navbar-title>
+      Capture
+    </super-navbar-title>
+  </super-navbar>
+
+  <super-navbar>
+    <super-navbar-button ng-click="cancel()">
+      Cancel
+    </super-navbar-button>
+    <super-navbar-title>
+      New Food
+    </super-navbar-title>
+  </super-navbar>
+
+  <div class="capture">
+    <img ng-hide="showSpinner" src="data:image/jpg;base64,{{image}}" />
+  </div>
+
+  <div class="padding">
+    <div ng-show="showSpinner" ng-include="'_spinner.html'"></div>
+    <form ng-hide="showSpinner" ng-submit="submitForm()" ng-include="'_form.html'"></form>
+  </div>
+  
+
+  </div>
+</div>

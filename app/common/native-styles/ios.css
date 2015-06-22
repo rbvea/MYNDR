@@ -46,3 +46,11 @@ tab-bar-item#food {
 tab-bar-item#map {
   background-image: url(icons/ei-location.svg);
 }
+
+tab-bar-item#favorites {
+  background-image: url(icons/home.svg);
+}
+
+tab-bar-item#capture {
+  background-image: url(icons/camera.svg);
+}
