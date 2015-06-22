@@ -2,7 +2,6 @@ angular
   .module('food')
   .controller("CaptureController", ($scope, Food, supersonic) ->
     $scope.food = {}
-    $scope.showSpinner = false
 
     $scope.submitForm = ->
       $scope.showSpinner = true
@@ -12,15 +11,13 @@ angular
       newfood.User = 'Michelle'
       newfood.Image = 'data:image/jpg;base64,' + $scope.image
       newfood.save().then ->
-        supersonic.ui.views.stop("food#capture")
-        supersonic.ui.views.start("food#capture") 
         supersonic.ui.modal.hide()
-        supersonic.ui.tabs.select 0
+        view = new supersonic.ui.View "food#index"
+        supersonic.ui.layers.push view
+        
 
     $scope.cancel = ->
-      supersonic.ui.modal.hide()
-      supersonic.ui.tabs.select 0
-  
+      supersonic.ui.modal.hide()  
 
    
     $scope.unsubscribe = supersonic.ui.views.current.whenVisible ->
@@ -38,8 +35,7 @@ angular
       $scope.unsubscribe()
 
     
-
-      
+  
 
 
     
