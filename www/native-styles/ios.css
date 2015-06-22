@@ -4,7 +4,7 @@
  ***********************************************************/
 
 navigation-bar {
-  background-color: #00B5FF;
+  background-color: #18C9A7;
   color: #ffffff;
 }
 
@@ -12,6 +12,7 @@ navigation-bar title {
   color: #ffffff;
   font-size: 18px;
   font-weight: 600;
+  font-family: 'Quicksand', serif;
 }
 
 navigation-bar button, navigation-bar back-bar-button {
