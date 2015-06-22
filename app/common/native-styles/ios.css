@@ -44,11 +44,11 @@ tab-bar-item#food {
 }
 
 tab-bar-item#map {
-  background-image: url(icons/ei-location.svg);
+  background-image: url(icons/location.svg);
 }
 
 tab-bar-item#favorites {
-  background-image: url(icons/home.svg);
+  background-image: url(icons/favorite.svg);
 }
 
 tab-bar-item#capture {
