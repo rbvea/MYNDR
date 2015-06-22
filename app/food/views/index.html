@@ -5,10 +5,13 @@
     <super-navbar-title>
       Food Feed
     </super-navbar-title>
+
   </super-navbar>
 
   <div ng-show="showSpinner" ng-include="'_spinner.html'"></div>
   <div ng-hide="showSpinner">
+
+    <img class="logo" src="/img/logo.png" />
     
     <ul class="list" ng-hide="foods.length == 0">
 

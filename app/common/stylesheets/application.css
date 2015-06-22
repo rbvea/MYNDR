@@ -166,4 +166,10 @@ i {
 	width: 100%;
 }
 
-
+.logo{
+	height: 100px;
+	position: absolute;
+	top: -5px;
+	right: 5px;
+	z-index: 1000;
+}
