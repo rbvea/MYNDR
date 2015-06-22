@@ -16,8 +16,11 @@ angular
       [21.292652, -157.850059],
     ]
 
-    icon = L.mapbox.marker.icon
-      'marker-color': '00B5FF'
+    # icon = L.mapbox.marker.icon
+    #   'marker-color': '00B5FF'
+
+    icon = L.divIcon
+      className: 'myndr-marker'
 
     markers = []
 

@@ -6,18 +6,17 @@
   </super-navbar>
   <div class="detail">
   <img src="{{food.Image}}">
-  <img src="{{food.Location}}">
-
+  <img src="/img/mockup-detail.png">
 
   <div class="padding">
     <div ng-show="showSpinner" ng-include="'_spinner.html'"></div>
     <div ng-hide="showSpinner">
-    
+
       <div class="entry-info">
-      <h2 ng-bind="food['Name']"></h2>  
+      <h2 ng-bind="food['Name']"></h2>
 
       <div class="right-info">
-      <img src="/icons/ei-location.svg" style="height:25px;" /> 
+      <img src="/icons/ei-location.svg" style="height:25px;" />
       <span class="location">Honolulu, HI</span>
 
       </div>
