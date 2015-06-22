@@ -11,7 +11,7 @@ body {
 .entry {
 	background: #fff;
 	margin-bottom: 1em;
-	padding: 10px;  
+	padding: 10px;
 	position: relative;
 }
 
@@ -95,7 +95,7 @@ i {
 /*
  * Flash animation
 */
- 
+
 @-webkit-keyframes flash {
     0%, 50%, 100% {opacity: 1;}
     25%, 75% {opacity: 0;}
@@ -105,7 +105,19 @@ i {
     25%, 75% {opacity: 0;}
 }
 .flash {
-	display: inline !important; 
+	display: inline !important;
     -webkit-animation-name: flash;
     animation-name: flash;
+}
+
+.myndr-marker {
+  background-image: url(/img/myndr-marker-2.png) !important;
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  width: 64px !important;
+  height: 64px !important;
+  -webkit-transform: translateX(-50px);
+  margin-top: -65px !important;
+  margin-left: -30px !important;
 }
